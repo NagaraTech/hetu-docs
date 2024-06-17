@@ -16,5 +16,4 @@ The following document will provide a detailed explanation of zeb from multiple 
 - [vlc](./vlc.md)
 - [usage](./usage.md)
 - [api](./api.md)
-- [dev](./dev.md)
 - [benchmark](./benchmark.md)

@@ -5,7 +5,7 @@ Follow the latest poc implementations
 - [zeb](https://github.com/hetu-project/zeb)
 - [chronos](https://github.com/hetu-project/chronos)
 - [zeb-aggregator](https://github.com/hetu-project/zeb-aggregator)
-- [zeb-pigeon](https://github.com/hetu-project/zeb-pigeon)
+- [zeb-Pegion](https://github.com/hetu-project/zeb-pegion)
 - [zeb-dolphin](https://github.com/hetu-project/zeb-dolphin)
 
 ### zeb
@@ -24,9 +24,8 @@ The zeb-aggregator is for collecting P2P VLC date periodically and providing API
 
 ### Pegion
 
-Pegion is a p2p chat chrome extension base on Zeb network. The message sent by Pigeon carries VLC information during its transmission through the Zed network. By utilizing the VLC information, the propagation path of the message can be effectively determined.
+Pegion is a p2p chat chrome extension base on Zeb network. The message sent by Pigeon carries VLC information during its transmission through the Zeb network. By utilizing the VLC information, the propagation path of the message can be effectively determined.
 
 ### Dolphin
 
 Dolphin is a browser for the zeb network to display a graph of message graph through nodes.
-
