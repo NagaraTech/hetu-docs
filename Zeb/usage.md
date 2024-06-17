@@ -1,34 +1,35 @@
 ## Usage
 
-### Integrating into the Existing Environment
+### Setting Up a New Environment
 
-p2p test env: http://54.151.255.61:13333/rpc13333
-gateway test env: http://52.221.181.98:8080/gateway
-Pegion chrome extension: https://github.com/NagaraTech/z-message-extension/actions/runs/9362056141
+〉Refer to all script files under all repos and this doc.
 
-1. After downloading the Chrome extension
-2. add an RPC
-3. create or add an account
-4. then add friends to start chatting.
+Here are the complete steps for setting up the new environment, including the previous steps:
 
-### Setting Up a New EnvironmentUsage
 
-> To create a new environment, it is recommended to start with at least 10 nodes.
+**Start Multiple VLC Instances:**
+   - Start one or more VLC instances on each computer, as needed.
+   - Ensure that each VLC instance uses the same configuration file, which should include the appropriate settings such as IP addresses and port numbers.
 
-Each node should include a `znet` and a `zchronod` with postgresql.
+**Start Multiple Nodes:**
+   - Start one or more node instances on each computer, as needed.
+   - Each node instance should include `znet` and `zchronod`, and should be configured to connect to the PostgreSQL database.
 
-[Here](https://github.com/NagaraTech/p2p-docker/tree/main/scripts) is a reference script to set up a new environment with at least 10 nodes, each including a `znet` and a `zchronod`
+**Configure the Respective Configuration Files:**
+   - For each VLC and node instance, ensure that the configuration file contains the correct network settings, database connection information, etc.
+   - Individual configuration for each node instance may be required as needed.
 
-Sure, here's a detailed guide on how to proceed with deploying the gateway, configuring the environment, and setting up the browser and Chrome extension for chatting.
+**Start the Gateway to Retrieve Data:**
+   - Configure the Gateway to connect to your node network.
+   - Start the Gateway and ensure that it connects correctly to the nodes and is able to retrieve data.
 
-Sure, here's a detailed guide on how to proceed with deploying the gateway, configuring the environment, and setting up the browser and Chrome extension for chatting.
+**Package and Install the Pegion Chrome Extension:**
+   - Download the code for the Pegion Chrome extension to your local machine.
+   - Package the extension using developer mode and install it in Chrome.
+   - Open Chrome, go to the "Extensions" page (chrome://extensions/), and drag and drop the packaged extension file to install it.
 
-Create an environment configuration file (e.g., `.env`) with the necessary settings.
+**Start Dolphin to View Node Status and Graph Status:**
+   - Use your project's Dolphin application to connect to your node network via the web interface.
+   - In Dolphin, view the node status and graph status to ensure that the nodes are running correctly and the network connection is proper.
 
-Here is a script to deploy the gateway using the configuration from the `.env` file:
-
-Set the Gateway URL in the browser configuration. Here is an example of how you might configure and deploy the browser application
-
-Ensure that your browser application reads from this configuration file and uses the `gatewayUrl` when making requests.
-
-Deploy the browser application following your standard deployment process. This might involve building and deploying a web application.
+After completing these steps, you should have successfully set up and started the new environment, and should be able to use the Gateway to retrieve data, as well as Dolphin to view node and graph status. If you need further assistance, feel free to ask!
