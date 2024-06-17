@@ -1,24 +1,6 @@
 # Clock & p2p combined or **optimizing**
 
-## Guideline & Principles
-
-### Clock Self ( Reference COPS )
-
-- L2 causality Replica group (similar Cohort, sub-network, or cluster, Maybe HLS certification)
-  - 1、CohortClock needs to be still asynchronous to update a batch of Txs &  VLC in a cluster (DHT network).
-  - 2、Merge by VLC-defined algorithm, communicate by gossip Algo. (small world servers
-     cluster)
-  - 3、Keep the size of the L2 causality network to prevent linear inflation of VLC space. (May need to change DHT or Bootstrap logic)
-  - 4、runtime clock data pruning（when node online or offline）
-  - 5、 A random select leader or conductor must exist for submitting Rollup-tx(ZKP IVC), and conductor clock in each L2 epoch timestamp.
-- L1 main-chain Hubs for security gatekeepers, consistency, and tokenization value layer.
-  - only accept cohort leader rollup tx and VLC data for a global up-to-date view of the entire network.
-
-### P2P & VLC
-
-- **SyncMessage**: VLC state & hash of a batch of tx needs to sync to peers
-- VLC state ZKP & txs MKT needs submit to L1 Hub for validation & global causal state
-- Adjust DHT, Bootstrap Algo parameters to Limit network scale and size
+This document is used to discuss how clock or vlc can be combined or optimized with p2p protocols.
 
 ## Modeling & Data Structure
 
@@ -72,7 +54,7 @@ classDiagram
     
     Message <-- Clock
     MergeLog
-    ClockInfo **<--** Clock
+    ClockInfo <-- Clock
     Message: +vlc Clock
     Message: +isZK bool
     Message: +from/toAddr str
@@ -86,14 +68,14 @@ classDiagram
     }
     
     class ClockInfo {
-	    ****-nodeID u128
+	    -nodeID u128
 	    -eventCount u128
-	    **-**createAt ****u128
+	    -createAt u128
 	    -Clock Clock
 	    -messageId String
     }
     
-    **class** MergeLog **{
+    class MergeLog {
 	    -fromID u128
 	    -toID u128
 	    -startCount u128
@@ -103,7 +85,7 @@ classDiagram
 	    -mergeAt u128
 	    +serialize()
 	    +deserialize()
-    }**
+    }
     
 ```
 
@@ -178,13 +160,5 @@ sequenceDiagram
     - ActiveSync
   - ClientMsg: only send latest clock
 - Tips:
-  - `C_A` refer to the latest clock of node A,  `C_B` : latest clock of node B.
-
-### Ledger Organization Modes
-
-Ledger mode is another important issue, this topic leaves to the `next step` to discuss or design.
-
-- DAG ledger
-  - DAG, not friendly to virtual-machine, and asset
-- liner chain ledger
-  - liner chain, not friendly scalability
+  - `C_A` refer to the latest clock of node A.  
+  - `C_B` : latest clock of node B.
