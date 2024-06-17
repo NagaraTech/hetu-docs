@@ -6,7 +6,7 @@ Zeb network is a p2p relay network with verifiable logic clock. This network is 
 
 ## Arch overview
 
-![arch](./img/arch.png)
+![arch](./img/image.png)
 
 ## Next
 
