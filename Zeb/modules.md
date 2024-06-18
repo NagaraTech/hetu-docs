@@ -3,7 +3,7 @@
 Follow the latest poc implementations
 
 - [zeb](https://github.com/hetu-project/zeb)
-- [chronos](https://github.com/hetu-project/chronos)
+- [zeb-clock](https://github.com/hetu-project/zeb-clock)
 - [zeb-aggregator](https://github.com/hetu-project/zeb-aggregator)
 - [zeb-Pegion](https://github.com/hetu-project/zeb-pegion)
 - [zeb-dolphin](https://github.com/hetu-project/zeb-dolphin)
@@ -12,11 +12,9 @@ Follow the latest poc implementations
 
 ZNet is a p2p relay network with verifiable VLC (virtual logic clock) causal order. This system is currently in poc stage.
 
-### zchronod
+### zeb-clock
 
-The zchronod or chronos is a implement of vlc(verifiable logical clock).
-
-It use the znet p2p relay as network module. And as a backend project node for supporting verifiable logical clock and causality ordering. This system is currently in poc stage.
+zeb-clock is a implement of [chronos](https://github.com/hetu-project/chronos) about vlc(verifiable logical clock). It use the zeb p2p relay as network module. And as a backend project node for supporting verifiable logical clock and causality ordering. This system is currently in poc stage.
 
 ### aggregator
 
